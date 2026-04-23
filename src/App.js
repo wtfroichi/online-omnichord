@@ -25,7 +25,7 @@ class App extends Component {
     window.onkeyup = e => this.handleUp(e);
 
     // Needed to initialize the sounds
-    const keys = 'qwertyuioasdfghjklzxcvbnm,.';
+    const keys = 'azertyuioqsdfghjklmwxcvbn,;:';
     const chords = ['eb', 'bb', 'f', 'c', 'g', 'd', 'a', 'e', 'b',
       'ebm', 'bbm', 'fm', 'cm', 'gm', 'dm', 'am', 'em', 'bm',
       'eb7', 'bb7', 'f7', 'c7', 'g7', 'd7', 'a7', 'e7', 'b7'];
@@ -183,7 +183,7 @@ class App extends Component {
 
   /*** Handler functions ***/
   handleUp(e) {
-    const upPosition = '1234567890-='.split('').indexOf(e.key);
+    const upPosition = "&é'\"(§è!çà)-".split('').indexOf(e.key);
     const currentPosition = this.state.barSelect.indexOf(1);
     // Last boolean handles case where
     // 1) User plays chord 'g' (WLOG)
